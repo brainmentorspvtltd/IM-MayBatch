@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/design.css">
+    <script src="js/config.js"></script>
+    <script src="js/item.js"></script>
+    <script src="js/itemoperations.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Item Details</legend>
+        <table>
+            <tr>
+                <td><label for="">Id</label></td>
+                <td><input id="id" type="text" placeholder="Item Id"></td>
+            </tr>
+            <tr>
+                <td><label for="">Name</label></td>
+                <td><input id="name" type="text" placeholder="Item Name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Price</label></td>
+                <td><input id="price" value="0" type="range" min="1" max="10000" step="100">
+                    <output id="priceoutput">0</output>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Color</label></td>
+                <td><input id="color" type="color"></td>
+            </tr>
+            <tr>
+                <td><label for="">Date</label></td>
+                <td><input id="date" type="date"></td>
+            </tr>
+            <tr>
+                <td><label for="">URL</label></td>
+                <td><input id="url" type="url" placeholder="Type URL Here"></td>
+            </tr>
+            <tr>
+                <td><label for="">Desc</label></td>
+                <td><textarea id="desc" cols="30" rows="10" placeholder="Type Desc Here"></textarea></td>
+            </tr>
+            <tr colspan="2">
+                <table>
+                    <tr>
+                        <td><button id="add">Add</button></td>
+                        <td><button>Delete</button></td>
+                        <td><button>Save</button></td>
+                        <td><button>Update</button></td>
+                        <td><button>Search</button></td>
+                        <td><button>Sort</button></td>
+                        <td><button>Clear</button></td>
+
+                        <td><button>Load</button></td>
+                        <td><button>Load From Server</button></td>
+                    </tr>
+                </table>
+
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>Item List</legend>
+        <table border="1">
+            <thead>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Color</td>
+                <td>Date</td>
+                <td>Url</td>
+                <td>Desc</td>
+                <td>Operations</td>
+            </thead>
+            <tbody id="items">
+
+            </tbody>
+        </table>
+    </fieldset>
+</body>
+
+</html>
