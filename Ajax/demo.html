@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function doWork() {
+            setTimeout(() => {
+                document.querySelector("#work").innerHTML = "Start... ";
+                for (let i = 1; i <= 10000000; i++) {
+                    for (let j = 1; j <= 1000; j++) {
+
+                    }
+                }
+
+                document.querySelector("#work").innerHTML = "Done ";
+            }, 14000);
+        }
+        var counter = 1;
+
+        function count() {
+            document.querySelector("#count").innerHTML = counter;
+            counter++;
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="doWork()">Work</button>
+    <h2>Work is <span id="work"></span></h2>
+    <br>
+    <button onclick="count()">Count</button>
+    <h3>Count is <span id="count"></span> </h3>
+</body>
+
+</html>

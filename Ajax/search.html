@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .size {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function printImages(data) {
+            var div = document.querySelector("#result");
+            div.innerHTML = "";
+            for (let img of data) {
+                var image = document.createElement("img");
+                image.setAttribute("src", img.images.original.url);
+                image.className = 'size';
+                console.log("Images ", img.images.original.url);
+                div.appendChild(image);
+            }
+
+        }
+
+        function doAjax() {
+            var searchValue = document.querySelector("#search").value;
+            var url = `http://api.giphy.com/v1/gifs/search?q=${searchValue}&api_key=vFRSFWo6g7vJ7ZAjt3DMDolU52ORTxwH&limit=10`;
+            fetch(url).then(response => {
+                response.json().then(data => {
+                    console.log("Data is ", data);
+                    printImages(data.data);
+                }).catch(e => console.log("Invalid JSon"));
+            }).catch(err => {
+                console.log("Error ", err);
+                document.querySelector("#error").innerHTML = "Error " + err;
+            })
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <span id="error"></span>
+    <input type="text" placeholder="Type to Search" id="search">
+    <button onclick="doAjax()">Search</button>
+    <hr>
+    <div id="result"></div>
+</body>
+
+</html>

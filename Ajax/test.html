@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function show() {
+            if (!("Notification" in window)) {
+                alert("This browser does not support desktop notification");
+            }
+
+            // Let's check whether notification permissions have already been granted
+            else if (Notification.permission === "granted") {
+                // If it's okay let's create a notification
+                var options = {
+                    body: 'This is the sample Text......',
+                    icon: './CRUD-App/images/edit.png',
+                    requireInteraction: true,
+                    silent: false,
+
+                    vibrate: [200, 100, 200] //This vibrates the device for 200 ms, then pauses for 100 ms before vibrating the device again for another 200 ms.
+
+
+                };
+                var notification = new Notification("Brain Mentors", options);
+            }
+
+            // Otherwise, we need to ask the user for permission
+            else if (Notification.permission !== "denied") {
+                Notification.requestPermission(function(permission) {
+                    // If the user accepts, let's create a notification
+                    if (permission === "granted") {
+                        var notification = new Notification("Hi there!");
+                    }
+                });
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="show()">Show</button>
+</body>
+
+</html>
