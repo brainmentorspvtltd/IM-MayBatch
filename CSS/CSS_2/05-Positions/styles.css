@@ -1,0 +1,23 @@
+body {
+    margin: 0px;
+}
+img {
+    width: 100%;
+}
+
+#header {
+    background-color: lightblue;
+    /* padding: 10px; */
+    padding: 10px 12px 14px 16px;
+    /* border-width: 10px 12px 14px 15px;
+    border-color: red blue green orange;
+    border-style: solid dashed dotted double; */
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+}
+
+#content {
+    margin-top: 120px;
+}

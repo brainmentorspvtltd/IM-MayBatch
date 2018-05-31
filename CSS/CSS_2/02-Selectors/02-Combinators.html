@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div_1 > h2 {
+            color: red;
+        }
+        #div_1 + h2 {
+            color: red;
+        }
+        #div_1 ~ h2 {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Combinators</h1>
+
+    <div id="div_1">
+        <h2>This is inside div_1</h2>
+        <div class="child">
+            <h2>This is inside child</h2>
+            <div class="grandchild">
+                <h2>This is grandchild</h2>
+            </div>
+        </div>
+    </div>
+    
+    <hr>
+
+    <h2>This is another heading</h2>
+    <h2>This is another heading</h2>
+    <h2>This is another heading</h2>
+
+    <div id="div_2">
+        <h2>This is inside div_1</h2>
+        <div class="child">
+            <h2>This is inside child</h2>
+            <div class="grandchild">
+                <h2>This is grandchild</h2>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

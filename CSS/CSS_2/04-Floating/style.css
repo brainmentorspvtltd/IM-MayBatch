@@ -1,0 +1,33 @@
+/* Pseudo Elements */
+/* After and Before */
+
+#parent:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#parent {
+    background-color: lightgray;
+}
+
+.col-1 {
+    width: 50%;
+    float: left;
+    /* background-color: lightblue; */
+}
+
+.col-2 {
+    float: left;
+    width: 50%;
+    /* background-color: lightcoral; */
+}
+
+.div_1 {
+    background-color: lightcyan;
+    /* clear: left; */
+}
+
+/* .clear {
+    clear: left;
+} */
