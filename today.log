@@ -1,0 +1,60 @@
+var arr = [10,20,30,90,100,20];
+undefined
+arr.forEach(y=>console.log(y));
+VM146:1 10
+VM146:1 20
+VM146:1 30
+VM146:1 90
+VM146:1 100
+VM146:1 20
+undefined
+arr.sort((a,b)=>a-b);
+(6) [10, 20, 20, 30, 90, 100]
+var obj = {
+arr:[10,3,5,10,20],
+arr2:[],
+print(){
+this.arr.forEach(function(currentValue){
+this.arr2.push(currentValue);
+})
+}
+}
+undefined
+obj.print();
+VM578:6 Uncaught TypeError: Cannot read property 'push' of undefined
+    at <anonymous>:6:11
+    at Array.forEach (<anonymous>)
+    at Object.print (<anonymous>:5:10)
+    at <anonymous>:1:5
+(anonymous) @ VM578:6
+print @ VM578:5
+(anonymous) @ VM590:1
+var obj = {
+arr:[10,3,5,10,20],
+arr2:[],
+print(){
+var that = this;
+this.arr.forEach(function(currentValue){
+that.arr2.push(currentValue);
+})
+}
+}
+undefined
+obj.print();
+undefined
+obj.arr2;
+(5) [10, 3, 5, 10, 20]
+var obj = {
+arr:[10,3,5,10,20],
+arr2:[],
+print(){
+
+this.arr.forEach(currentValue=>this.arr2.push(currentValue));
+
+}
+}
+undefined
+obj.print();
+undefined
+obj.arr2;
+(5) [10, 3, 5, 10, 20]
